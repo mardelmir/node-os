@@ -6,3 +6,5 @@
 // CPUs: 12
 // MemoriaTotal: 16384.00 MB
 // MemoriaLibre: 370.71 MB
+
+// os: version(), platform(), cpus(), totalmem(), networkInterfaces, freemem(), type(), arch()
