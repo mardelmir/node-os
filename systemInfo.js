@@ -1,1 +1,7 @@
-// Aquí toda la info para imprimir por el terminal
+// node systemInfo.js
+
+const osMod = require('./osModule.js')
+const networkMod = require('./networkModule.js')
+
+osMod()
+networkMod()

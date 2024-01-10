@@ -1,16 +1,19 @@
-// Ejemplo de output:
-// Interfaz lo0:
-//   Familia: IPv4
-//   Dirección: 127.0.0.1
-//   Interno: true
-//   Familia: IPv6
-//   Dirección: ::1
-//   Interno: true
-//   Familia: IPv6
-//   Dirección: fe80::1
-//   Interno: true
+// node networkModule.js
 
-// Interfaz en5:
-//   Familia: IPv6s
-//   Dirección: fe80::aede:48ff:fe00:1122
-//   Interno: false
+const networkMod = () => {
+    const networkInterfaces = require('node:os').networkInterfaces()
+    console.group('Interfaz de red:')
+    for (const network in networkInterfaces) {
+        console.group(`Interfaz ${network}:`)
+        networkInterfaces[network].forEach(element => {
+            console.log(`Familia: ${element.family}`)
+            console.log(`Dirección: ${element.address}`)
+            console.log(`Interno: ${element.internal}`)
+        })
+        console.log('')
+        console.groupEnd()
+    }
+    console.groupEnd()
+}
+
+module.exports = networkMod
