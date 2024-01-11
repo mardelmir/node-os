@@ -1,14 +1,13 @@
-// node networkModule.js
-
-const networkMod = () => {
+function networkMod() {
     const networkInterfaces = require('node:os').networkInterfaces()
-    console.group('Interfaz de red:')
-    for (const network in networkInterfaces) {
-        console.group(`Interfaz ${network}:`)
-        networkInterfaces[network].forEach(element => {
-            console.log(`Familia: ${element.family}`)
-            console.log(`Dirección: ${element.address}`)
-            console.log(`Interno: ${element.internal}`)
+
+    console.group('Interfaces de red:')
+    for (const element in networkInterfaces) {
+        console.group(`Interfaz ${element}:`)
+        networkInterfaces[element].forEach(interface => {
+            console.log(`Familia: ${interface.family}`)
+            console.log(`Dirección: ${interface.address}`)
+            console.log(`Interno: ${interface.internal}`)
         })
         console.log('')
         console.groupEnd()

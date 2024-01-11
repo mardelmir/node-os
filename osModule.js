@@ -1,6 +1,4 @@
-// node osModule.js
-
-const osMod = () => {
+function osMod() {
     const os = require('node:os')
 
     console.log('')
@@ -9,8 +7,10 @@ const osMod = () => {
     console.log(`Versión: ${os.version()}`)
     console.log(`Arquitectura: ${os.arch()}`)
     console.log(`CPUs: ${os.cpus().length}`)
-    console.log(`Memoria Total: ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`)
-    console.log(`Memoria Libre: ${(os.freemem() / 1024 / 1024).toFixed(2)} MB`)
+    console.log(`Memoria total: ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`)
+    console.log(`Memoria libre: ${(os.freemem() / 1024 / 1024).toFixed(2)} MB`)
+    console.log('')
 }
 
 module.exports = osMod
+
