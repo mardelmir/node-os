@@ -1,3 +1,5 @@
+const internal = require('node:stream')
+
 function networkMod() {
     const networkInterfaces = require('node:os').networkInterfaces()
 
@@ -16,3 +18,22 @@ function networkMod() {
 }
 
 module.exports = networkMod
+
+// Corrección de clase
+
+// const os = require('node:os')
+// const redes = {}
+
+// function printNetworkModule () {
+//     const interfaces = os.networkInterfaces()
+//     Object.keys(interfaces).forEach((name) => {
+//         redes[name] = interfaces[names].map((interface) => ({
+//             familia: interface.family,
+//             direccion: interface.address,
+//             interno: interface.internal
+//         }))
+//     })
+//     return redes
+// }
+
+// redes[name] = crea array con lo que haya en name, se crea array porque no sabes si hay uno o varios objetos.

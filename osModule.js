@@ -13,4 +13,3 @@ function osMod() {
 }
 
 module.exports = osMod
-
