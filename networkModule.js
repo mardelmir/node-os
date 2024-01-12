@@ -1,5 +1,3 @@
-const internal = require('node:stream')
-
 function networkMod() {
     const networkInterfaces = require('node:os').networkInterfaces()
 
